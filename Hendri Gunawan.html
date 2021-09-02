@@ -1,0 +1,151 @@
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+
+	<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+		background-color: AliceBlue;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+	</style>
+
+</head>
+<body>
+	<center>
+	<h1>Hendri Gunawan (3201916130)</h1>
+	</center>
+	<hr>
+	<!-- Accordion -->
+	<h2 class="demoHeaders">Penjelasan Beberapa Program Studi Jurusan ELEKTRO</h2>
+	<div id="accordion">
+		<h3>TEKNIK INFORMATIKA</h3>
+		<div>Teknik Informatika merupakan salah satu jurusan pendidikan tingkat perguruan tinggi yang mempelajari serta menerapkan prinsip-prinsip ilmu komputer dan analisis matematis dalam perancangan, pengujian, pengembangan, dan evaluasi sistem operasi, perangkat lunak (software), dan kinerja komputer. Dalam kata lain, bidang studi ini akan melakukan pembahasan terkait pengolahan data dengan memanfaatkan teknologi komputer yang menggunakan prinsip dan proses logika.</div>
+		<h3>TEKNIK ELEKTRONIKA</h3>
+		<div>Teknik Elektronika adalah bidang teknik yang mempelajari tentang komponen listrik dan peralatan-peralatan semi konduktor. Teknik Elektronika merupakan bagian dari Teknik Listrik (Teknik Elektro).<br>
+		Sesungguhnya istilah 'Teknik Elektronika' telah muncul di tahun 1950, setelah perubahan teknologi yang terjadi setelah Perang Dunia Ke-2 di tahun 1940. Tetapi di abad ke-19, Teknik Elektronika baru diangkat menjadi mata kuliah setelah terjadi perkembangan teknologi yang signifikan di Industri Telegram, Radio dan Telepon.  </div>
+		<h3>TEKNIK LISTRIK</h3>
+		<div>Teknik Listrik (Teknik Elektro) adalah salah satu bidang ilmu teknik mengenai aplikasi listrik untuk memenuhi kebutuhan daya listrik dalam skala besar seperti pada industri dan mesin-mesin. Teknik Listrik berhadapan langsung dengan ketersediaan sumber daya energi , transmisi energi dan dampak dari energi terhadap sistem operasi permesinan secara keseluruhaan. Teknik listrik bekerja sama dengan insinyur dari area lain seperti teknik kimia, teknik mesin, dan teknik sipil untuk merancang, mengembangkan, dan membantu produksi berbagai macam produk dan jasa seperti sistem distribusi energi, komputer pribadi, sistem satelit, radio genggam, sistem radar, mobil listrik, jantung buatan, dan lain-lain yang melibatkan komponen listrik dan elektronik. </div>
+	</div>
+
+	<!-- Autocomplete -->
+	<h2 class="demoHeaders">Nama</h2>
+	<div>
+		<input id="autocomplete" title="type &quot;a&quot;">
+	</div>
+
+	<!-- Checkboxradio -->
+	<h2 class="demoHeaders">Program Studi</h2>
+	<form style="margin-top: 1em;">
+		<div id="radioset">
+			<input type="radio" id="radio1" name="radio"><label for="radio1">Teknik Elekronika</label>
+			<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Teknik Informatika</label>
+			<input type="radio" id="radio3" name="radio"><label for="radio3">Teknik Listrik</label>
+		</div>
+	</form>
+
+	<!-- Progressbar -->
+	<h2 class="demoHeaders">Kelas</h2>
+	<select id="selectmenu">
+		<option>4A</option>
+		<option>4B</option>
+		<option>4C</option>
+		<option selected="selected">4D</option>
+	
+	</select>
+	 <h2 class="demoHeaders">Submit</h2>
+        <button id="button">Simpan</button>
+        <button id="button-icon">An icon-only button</button>
+
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.js"></script>
+
+        <script>
+            var availableTags = [
+                "Hendri",
+                "Budi",
+                "Wan",
+                "Chery",
+                "Dimas",
+                "Ega",
+                "Fajar",
+                "Gilang",
+                "Heza",
+                "Ikhsan",
+                "Jaka",
+                "Kamil",
+                "Lala",
+                "Maman",
+                "Nurul",
+                "Ogi",
+                "Pikri",
+                "Qia",
+                "Risa",
+                "Siska",
+                "Tiur",
+                "Umar",
+                "Via",
+                "Wandy",
+                "Xiau",
+                "Icak",
+                "Farhan"
+            ];
+            $( "#autocomplete" ).autocomplete({
+	            source: availableTags
+            });
+
+            $("#radioset").buttonset();
+
+            $( "#selectmenu" ).selectmenu();
+            $( "#accordion" ).accordion();
+
+            $( "#button" ).button();
+            $( "#button-icon" ).button({
+	            icon: "ui-icon-gear",
+	            showLabel: false
+                });
+
+
+    </script>
+
+</body>
+</html>
